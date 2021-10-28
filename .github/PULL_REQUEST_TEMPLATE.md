@@ -1,0 +1,42 @@
+<!-- The main idea here is to normalize all pull requests. Please replace the content of each section with valuable information of the pull request that's being open. -->
+
+# Description
+
+Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
+
+Fixes # (issue)
+
+## Type of change
+
+Please delete options that are not relevant.
+
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] This change requires a documentation update
+
+# How Has This Been Tested?
+
+Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration
+
+1. Test A
+2. Test B
+3. Test C
+
+# Checklist
+
+- [ ] My code follows the style guidelines of this project
+- [ ] I have performed a self-review of my own code
+- [ ] I have made corresponding changes to the documentation
+- [ ] I have added tests that prove my fix is effective or that my feature works
+- [ ] New and existing unit tests pass locally with my changes
+- [ ] Add labels to distinguish the type of the pull request. Available labels are `bug`, `enhancement`, `feature`, and `review`.
+
+# Attachments
+
+If you want to embed images for a better description, this is how you do it (example in the comment):
+
+<!-- Format: ![Alt Text](url) -->
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+
+
