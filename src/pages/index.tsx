@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css';
 
 const bla = 'ae';
 const bla2 = 'ae';
+const bla2 = 'ae';
 
 const Home: NextPage = () => {
   return (
