@@ -1,4 +1,10 @@
 import styled from 'styled-components';
+import { ButtonProps } from './Button.types';
+
+type BtnProps = Pick<
+  ButtonProps,
+  'primary' | 'size' | 'backgroundColor' | 'fullWidth'
+>;
 
 const storybookButtonPrimary = `
   color: white;
@@ -26,12 +32,16 @@ const storybookButtonLarge = `
   padding: 12px 24px;
 `;
 
+const storybookButtonFullWidth = `
+  width: 100%;
+`;
+
 const storybookButtonDisabled = `
   cursor: not-allowed;
   opacity: 0.3;
 `;
 
-const CustomButton = styled.button`
+const CustomButton = styled.button<BtnProps>`
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   border: 0;
@@ -41,7 +51,7 @@ const CustomButton = styled.button`
   line-height: 1;
 
   ${({ primary }) =>
-    primary === true
+    primary
       ? `
       ${storybookButtonPrimary}
   `
@@ -66,6 +76,12 @@ const CustomButton = styled.button`
     disabled &&
     `
       ${storybookButtonDisabled}
+  `}
+
+  ${({ fullWidth }) =>
+    fullWidth &&
+    `
+      ${storybookButtonFullWidth}
   `}
 
   background-color: ${({ backgroundColor }) => backgroundColor};

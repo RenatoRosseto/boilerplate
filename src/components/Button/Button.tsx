@@ -4,15 +4,24 @@ import PropTypes from 'prop-types';
 import CustomButton from './Button.styles';
 import { ButtonProps } from './Button.types';
 
-const Button = React.forwardRef<HTMLElement, ButtonProps>(
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { primary, size, backgroundColor, ariaLabel, label, onClick, ...props },
+    {
+      children,
+      primary,
+      size,
+      backgroundColor,
+      fullWidth,
+      ariaLabel,
+      onClick,
+      ...props
+    },
     ref,
   ) => {
     return (
       <CustomButton
-        type="button"
         primary={primary}
+        fullWidth={fullWidth}
         size={size}
         backgroundColor={backgroundColor}
         aria-label={ariaLabel}
@@ -20,7 +29,7 @@ const Button = React.forwardRef<HTMLElement, ButtonProps>(
         ref={ref}
         {...props}
       >
-        {label}
+        {!!children && <span>{children}</span>}
       </CustomButton>
     );
   },
@@ -32,9 +41,18 @@ Button.propTypes = {
   primary: PropTypes.bool,
   backgroundColor: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  ariaLabel: PropTypes.string,
-  label: PropTypes.string.isRequired,
+  fullWidth: PropTypes.bool,
+  disabled: PropTypes.bool,
   onClick: PropTypes.func,
+  children: PropTypes.node,
+  type: PropTypes.oneOf(['submit', 'reset', 'button']),
+  ariaLabel: PropTypes.string,
+};
+
+Button.defaultProps = {
+  primary: true,
+  fullWidth: false,
+  size: 'medium',
 };
 
 export default Button;
