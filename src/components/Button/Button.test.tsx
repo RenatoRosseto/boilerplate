@@ -12,6 +12,18 @@ describe('<Button />', () => {
     expect(screen.getByRole('button')).toBeInTheDocument();
   });
 
+  it('should render a green button when mobile mode', () => {
+    render(<Button>Botão</Button>);
+
+    expect(screen.getByRole('button')).toHaveStyleRule(
+      'background-color',
+      'green',
+      {
+        media: '(max-width: 768px)',
+      },
+    );
+  });
+
   it('should render button component disabled', () => {
     const { container } = render(
       <Button disabled ariaLabel={'botão desabilidado'}>

@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
+
 import { ButtonProps } from './Button.types';
 
 type BtnProps = Pick<
@@ -85,6 +87,10 @@ const CustomButton = styled.button<BtnProps>`
   `}
 
   background-color: ${({ backgroundColor }) => backgroundColor};
+
+  ${media.lessThan('medium')`
+    background-color: green;
+  `}
 `;
 
 export default CustomButton;
