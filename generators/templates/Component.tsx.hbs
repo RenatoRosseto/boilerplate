@@ -1,10 +1,14 @@
 import * as Style from './{{pascalCase name}}.styles';
 import { {{pascalCase name}}Props } from './{{pascalCase name}}.types';
 
-const {{pascalCase name}} = () => (
+const {{pascalCase name}} = ({}: {{pascalCase name}}Props) => (
   <Style.Wrapper>
     <h1>{{pascalCase name}}</h1>
   </Style.Wrapper>
 );
+
+{{pascalCase name}}.defaultProps = {
+
+};
 
 export default {{pascalCase name}};

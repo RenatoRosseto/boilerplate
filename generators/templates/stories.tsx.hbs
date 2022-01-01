@@ -1,9 +1,10 @@
 import { Story, Meta } from '@storybook/react';
 import {{pascalCase name}} from '../';
+import { {{pascalCase name}}Props } from '../{{pascalCase name}}.types';
 
 export default {
   title: '{{pascalCase name}}',
   component: {{pascalCase name}},
-} as Meta;
+} as Meta<{{pascalCase name}}Props>;
 
-export const Default: Story = () => <{{pascalCase name}} />;
+export const Default: Story<{{pascalCase name}}Props> = () => <{{pascalCase name}} />;
