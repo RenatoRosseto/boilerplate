@@ -1,4 +1,10 @@
 This is a [Next.js](https://nextjs.org/) boilerplate.
+
+How to start from this project?
+```bash
+yarn create next-app [project-name] -e [GitHub URL]
+```
+
 ## What is inside?
 This project uses lot of stuff as:
 - [TypeScript](https://www.typescriptlang.org/)
